@@ -18,4 +18,5 @@ for y in range(0, height, tile_height):
     draw.line([(0, y), (width, y)], fill="red", width=1)
 
 # Save to file
-image.save("pyData/grid_overlay129129.png")
+image.save("output/filename.png")
+
