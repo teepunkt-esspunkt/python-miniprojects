@@ -1,3 +1,4 @@
+#simple combining all .txt files into one
 import os
 
 def combine_txt_files(output_file="combined.txt"):
@@ -19,3 +20,4 @@ def combine_txt_files(output_file="combined.txt"):
 
 if __name__ == "__main__":
     combine_txt_files()
+
