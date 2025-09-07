@@ -1,3 +1,4 @@
+#to clean up some messed up structure
 import os
 import shutil
 
@@ -23,5 +24,6 @@ for root, dirs, files in os.walk(script_dir):
                 counter += 1
 
         shutil.move(file_path, destination)
+
 
 print("done:", script_dir)
