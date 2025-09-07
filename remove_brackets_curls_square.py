@@ -1,3 +1,4 @@
+# to remove some brackets from .txt file
 import re
 import os
 
@@ -24,3 +25,4 @@ if __name__ == "__main__":
     # Specify your file relative to the script's folder
     filename = os.path.join(script_dir, "combined.txt")  # <-- Replace with your file name
     remove_brackets_from_file(filename)
+
