@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 # since i use comfyUI and automatic1111 and the model files are very big but can be used by both i created this to check if all files are linked correctly in both places
 import os
 import sys
@@ -151,4 +149,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
