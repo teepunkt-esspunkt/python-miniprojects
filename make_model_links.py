@@ -1,3 +1,4 @@
+#script to symlink all model files in root folder to given path from .txt file
 import os
 import sys
 from pathlib import Path
@@ -46,3 +47,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
