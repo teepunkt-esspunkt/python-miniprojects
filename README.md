@@ -1,1 +1,1 @@
-Some python scripts i happen to use
+more or less useful python scripts
