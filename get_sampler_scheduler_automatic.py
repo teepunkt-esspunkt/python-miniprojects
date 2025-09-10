@@ -1,3 +1,5 @@
+#put the output as comment behind sampler/scheduler in "run_all_models_automatic.py" for easy choice
+
 import requests
 
 A1111 = "http://127.0.0.1:7860"
