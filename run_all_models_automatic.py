@@ -15,6 +15,9 @@ CFG    = 7
 W, H   = 700, 900
 BATCH  = 1
 
+# :sampling method & schedule type: comments from "get_sampler_scheduler_automatic.py"
+SAMPLER   = "DPM++ 2M"   ## DPM++ 2M, DPM++ SDE, DPM++ 2M SDE, DPM++ 2M SDE Heun, DPM++ 2S a, DPM++ 3M SDE, Euler a, Euler, LMS, Heun, DPM2, DPM2 a, DPM fast, DPM adaptive, Restart, DDIM, DDIM CFG++, PLMS, UniPC, LCM
+SCHEDULER = "Karras"     # Automatic, Uniform, Karras, Exponential, Polyexponential, SGM Uniform, KL Optimal, Align Your Steps, Simple, Normal, DDIM, Beta
 # --------------------
 
 def sanitize(s): return re.sub(r"[^a-zA-Z0-9._-]+", "_", s)
@@ -49,17 +52,13 @@ def txt2img(base_outdir, date_str, time_str, filename_prefix, width, height):
         "height": height,
         "batch_size": BATCH,
         "save_images": True,
+        "sampler_name": SAMPLER,
+        **({"scheduler": scheduler} if scheduler else {}),
         "override_settings": {
-            # point to the *base* txt2img folder
             "outdir_txt2img_samples": base_outdir.replace("\\","/"),
             "outdir_txt2img_grids":   base_outdir.replace("\\","/"),
-
-            # tell A1111 to actually create subfolders here
             "save_to_dirs": True,
-
-            # lock the subfolder pattern to your run folder
             "directories_filename_pattern": f"{date_str}\\{time_str}",
-
             "samples_save": True,
             "samples_filename_pattern": f"{filename_prefix}-[seed]"
         },
