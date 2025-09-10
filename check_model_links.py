@@ -1,4 +1,4 @@
-# since i use comfyUI and automatic1111 and the model files are very big but can be used by both i created this to check if all files are linked correctly in both places
+# since i use comfyUI and automatic1111 and the model files are very big but can be used by both i created this to check if all files are linked correctly in both places, turned out as completely useless...
 import os
 import sys
 from pathlib import Path
@@ -149,5 +149,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
